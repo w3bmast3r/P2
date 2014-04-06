@@ -85,12 +85,6 @@ public class CartaJogar {
             }
         }
         
-        private void printArrayList(){
-            for(i=0;i<Baralho.size();i++){
-                
-            }
-        }
-        
         
         
         
