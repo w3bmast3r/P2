@@ -1,50 +1,49 @@
 
 package Teste_10_04_2013;
 
+import java.util.ArrayList;
+
 public class CartaJogar {
     
-    int valorCarta, valorNaipe;
-	
-	
+    int i, valorCarta, valorNaipe;
+
+    ArrayList <Integer> Baralho = new ArrayList();
+    
 	//Construtor
+    
+    public CartaJogar(){
+        
+    }
+    
 	public CartaJogar(int valorCarta, int valorNaipe){
 		
-		valorCarta = this.valorCarta;
-		valorNaipe = this.valorNaipe;
-		
-		if((valorCarta < 2 || valorCarta > 14) && (valorNaipe < 1 || valorNaipe > 4)){
-			System.out.println("Valores introduzidos errados");
-		}
-		else{
-			
-			CartaJogar c1 = new CartaJogar(valorCarta, valorNaipe);
-			
-		}
-		
-	}
+		this.valorCarta = valorCarta;
+                this.valorNaipe = valorNaipe;
+                
+                }
 	
 	
 	private int getvalorCarta(){
-		return this.valorCarta;
+		return valorCarta;
 	}
 	
 	private int getvalorNaipe(){
-		return this.valorNaipe;
+		return valorNaipe;
 	}
 	
 	private void setvalorCarta(int valorCarta){
-		valorCarta = this.valorCarta;
+		this.valorCarta = valorCarta;
 	}
 	
 	private void setvalorNaipe(int valorNaipe){
 
-		valorNaipe = this.valorNaipe;
+		this.valorNaipe = valorNaipe;
 	}
 	
 	
-	private String toString(int valorCarta, int valorNaipe){
+	public String toString(int valorCarta, int valorNaipe){
 		
-		return (valorCarta+"_"+valorNaipe);
+		return(this.valorCarta+"_"+this.valorNaipe);
 	}
 	
 	private boolean equals(int valorCarta, int valorNaipe){
@@ -56,8 +55,49 @@ public class CartaJogar {
 		}
 	}
 	
-	private int compareTo(){
-		
-	}
+	private int compareTo(int valorCarta, int valorNaipe){
+		if(this.valorCarta>valorCarta && this.valorNaipe==valorNaipe){
+                    return 1;
+                }
+                if(this.valorCarta<valorCarta){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+        }
+        
+        private boolean vermelha(){
+            if(valorNaipe==3 || valorNaipe==4){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        
+        private boolean preta(){
+            if(valorNaipe==1 || valorNaipe==2){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        
+        private void printArrayList(){
+            for(i=0;i<Baralho.size();i++){
+                
+            }
+        }
+        
+        
+        
+        
+        public static void main(String[] args){
+            CartaJogar c1 = new CartaJogar(10,1);
+            CartaJogar c2 = new CartaJogar(10,2);
+            System.out.println(c1.compareTo(10, 1));
+        }
     
 }
