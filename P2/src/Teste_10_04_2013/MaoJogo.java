@@ -21,9 +21,4 @@ public class MaoJogo {
         
     }
     
-    public void add(CartaJogar c){
-        if(CartaJogar<)
-            Mao.add(c);
-    }
-    
 }

@@ -42,8 +42,18 @@ public class CartaJogar {
 	
 	
 	public String toString(int valorCarta, int valorNaipe){
-		
-		return(this.valorCarta+"_"+this.valorNaipe);
+		if(valorNaipe==1){
+                    return(valorCarta+"_Copas");
+                }
+                if(valorNaipe==2){
+                    return(valorCarta+"_Paus");
+                }
+                if(valorNaipe==3){
+                    return(valorCarta+"_Espadas");
+                }
+                else{
+                    return(valorCarta+"_Ouros");
+                }
 	}
 	
 	private boolean equals(int valorCarta, int valorNaipe){
@@ -89,9 +99,8 @@ public class CartaJogar {
         
         
         public static void main(String[] args){
-            CartaJogar c1 = new CartaJogar(10,1);
-            CartaJogar c2 = new CartaJogar(10,2);
-            System.out.println(c1.compareTo(10, 1));
+            CartaJogar c1 = new CartaJogar();
+            System.out.println(c1.toString(10, 2));
         }
     
 }
