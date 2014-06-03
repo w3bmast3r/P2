@@ -9,7 +9,7 @@ public class Questao_QQSM extends QQSM{
     public static void main(String[] args) throws FileNotFoundException{
     	
     	Questao_QQSM newGame = new Questao_QQSM();
-		newGame.readFile();
+	newGame.readFile();
     	newGame.counterLevel();
     	
     }

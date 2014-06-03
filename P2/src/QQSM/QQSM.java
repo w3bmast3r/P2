@@ -68,7 +68,7 @@ public class QQSM{
 	//READ FILE > ORGANIZE ALL LEVELS ON COMPATIBLE ARRAYLISTS
 	public void readFile() throws FileNotFoundException{
 		
-		Scanner in = new Scanner(new FileReader("/home/bruno/workspace/P2/src/QQSM/perguntas.txt"));
+		Scanner in = new Scanner(new FileReader("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/perguntas.txt"));
 		
 		while (in.hasNextLine()){
 			
