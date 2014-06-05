@@ -120,6 +120,77 @@ public class QQSM{
 				
 				System.out.println("\n"+ "Introduza a opção que acha correcta: ");
 				answer = sC.nextLine();
+                                
+                                //
+                                //TESTE DE VERIFICAÇÃO DE RESPOSTA
+                                //
+                                
+                                switch(answer){
+                                    case "A":
+                                        convertAnswer();
+                                        if(finalAnswer.equals(Ql1.get(whichQuestion*7+(7-2)))){
+                                            System.out.println("Resposta correcta!\n");
+                                            System.out.println("Parabéns, acabou de ganhar "+ Values[i] + " Euros\n");
+                                            i++;
+                                            break;
+                                        }
+                                        else{
+                                            System.out.println("O jogo do Quem Quer Ser Milionário terminou por hoje.\n");
+                                            break;
+                                        }
+                                        
+                                    case "B":
+                                        convertAnswer();
+                                        if(finalAnswer.equals(Ql1.get(whichQuestion*7+(7-2)))){
+                                            System.out.println("Resposta correcta!\n");
+                                            System.out.println("Parabéns, acabou de ganhar "+ Values[i] + " Euros\n");
+                                            i++;
+                                            break;
+                                        }
+                                        else{
+                                            System.out.println("O jogo do Quem Quer Ser Milionário terminou por hoje.\n");
+                                            break;
+                                        }
+                                    case "C":
+                                        convertAnswer();
+                                        if(finalAnswer.equals(Ql1.get(whichQuestion*7+(7-2)))){
+                                            System.out.println("Resposta correcta!\n");
+                                            System.out.println("Parabéns, acabou de ganhar "+ Values[i] + " Euros\n");
+                                            i++;
+                                            break;
+                                        }
+                                        else{
+                                            System.out.println("O jogo do Quem Quer Ser Milionário terminou por hoje.\n");
+                                            break;
+                                        }
+                                    case "D":
+                                        convertAnswer();
+                                        if(finalAnswer.equals(Ql1.get(whichQuestion*7+(7-2)))){
+                                            System.out.println("Resposta correcta!\n");
+                                            System.out.println("Parabéns, acabou de ganhar "+ Values[i] + " Euros\n");
+                                            i++;
+                                            break;
+                                        }
+                                        else{
+                                            System.out.println("O jogo do Quem Quer Ser Milionário terminou por hoje.\n");
+                                            break;
+                                        }
+                                    case "Desisto":
+                                        System.out.println("O jogo do Quem Quer Ser Milionário terminou por hoje.\n");
+					System.out.println("Levou assim para casa o prémio de " + Values[i] + " Euros\n");
+                                        break;
+                                    default:
+                                        System.out.println("Resposta inválida, tente novamente");
+                                }
+                                
+                                
+                                //
+                                //FINAL DO TESTE
+                                //
+                                
+                                
+                                
+/*
 				
 				convertAnswer(); //Adiciona "R: " para as duas Strings poderem ser comparadas
 				
@@ -141,7 +212,7 @@ public class QQSM{
 				
 			}
 
-
+*/
 			if(i>5 && i<11){
 				numberofQuestions=0;
 				numberofQuestions = (Ql2Counter/7); //Numero de questoes de nível 1
@@ -221,6 +292,7 @@ public class QQSM{
 			}
 		}
 	}
+    }
 	
 	public void convertAnswer(){
 		finalAnswer = ("R: " + answer);
