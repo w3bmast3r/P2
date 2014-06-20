@@ -184,27 +184,6 @@ public class QQSM {
             if (answer.equals("DESISTO")) {
                 return;
             }
-
-            /*
-             if (finalAnswer.equals("R: Desisto")) {
-             System.out.println("O jogo do Quem Quer Ser Milionário terminou por hoje.\n");
-             System.out.println("Levou assim para casa o prémio de " + Values[i] + " Euros");
-             }
-
-             if (finalAnswer.equals(Ql3.get(whichQuestion * 7 + (7 - 2)))) {
-             if (i != 15) {
-             System.out.println("Resposta correcta!\n");
-             System.out.println("Parabéns, acabou de ganhar " + Values[i] + " Euros");
-             i++;
-             } else {
-             System.out.println("PARABÉNS, ACABOU DE GANHAR O JOGO DO QUEM QUER SER MILIONÁRIO!\n GANHOU O PŔEMIO DE 250.000 Euros!");
-             }
-             } else {
-             System.out.println("O jogo do Quem Quer Ser Milionário terminou por hoje.");
-             System.out.println("Levou assim para casa o prémio de " + Values[10] + " Euros");
-             break;
-             }
-             */
         }
     }
     
