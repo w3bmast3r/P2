@@ -9,7 +9,8 @@ public class Questao_QQSM extends QQSM{
     public static void main(String[] args) throws FileNotFoundException{
     	
     	Questao_QQSM newGame = new Questao_QQSM();
-	newGame.readFile();
+        newGame.asknamePlayer();
+	newGame.readFile("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/perguntascompleto.txt");
     	newGame.counterLevel();
     	
     }
