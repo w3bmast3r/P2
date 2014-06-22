@@ -64,13 +64,13 @@ public class QQSM {
    
     //VERIFY NUMBER LEVEL && CONVERT USER'S ANSWER IN TYPE "R: A" && VERIFY INPUT
     public void counterLevel() {
-        while (i < 15) { //Número de níveis
-            if (i < 5 && wrongAnswer == 0) { // Número de questoes de primerio nível
+        while (i < 15) {                                                                                                                         //NUMBER LEVELS
+            if (i < 5 && wrongAnswer == 0) {                                                                                                     //NUMBER OF QUESTIONS OF THE FIRST LEVEL
                 if (Ql1.isEmpty()) {
                     System.out.println("Terminou por hoje o jogo devido a falta de questões.");
                     return;
                 }
-                if (wrongInput == 0) {
+                if (wrongInput == 0) {                                                                                                           //IF PLAYER NEVER MADE A MISTAKE (INPUT)
                     numberofQuestions = (Ql1Counter / 7); //Numero de questoes de nível 1 
                     whichQuestion = rN.nextInt(numberofQuestions);
 
@@ -85,7 +85,7 @@ public class QQSM {
 
                     convertAnswer();
                 }
-                if (wrongInput > 0) {
+                if (wrongInput > 0) {                                                                                                           //IF PLAYER MADE MORE THAN ONE MISTAKE (INPUT)
                     System.out.println("Pergunta número " + (i + 1) + ": \n" + Ql1.get(whichQuestion * 7) + "\n");
 
                     for (c = 0; c < 4; c++) {
@@ -496,7 +496,6 @@ public class QQSM {
 
                 // i = Quantas vezes foi colocada a questão
                 // c = Quantas vezes errou o input
-                if (i == 0) {
                     while (c > 0) {
                         System.out.println("Qual o nível da questão?");
                         String levelQuestion = sC.nextLine();
@@ -522,7 +521,6 @@ public class QQSM {
                                 break;
                         }
                     }
-                }
 
                 System.out.println("Qual a questão?");
                 String question = sC.nextLine();
