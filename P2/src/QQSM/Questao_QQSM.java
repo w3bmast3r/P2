@@ -12,7 +12,8 @@ public class Questao_QQSM extends QQSM{
         newGame.asknamePlayer();
 	newGame.readFile("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/perguntascompleto.txt");
     	newGame.counterLevel();
-    	
+    	//newGame.writeFile("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/teste.txt");
+        
     }
 		
 }	

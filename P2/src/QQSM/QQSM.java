@@ -483,9 +483,116 @@ public class QQSM {
             Ql3Counter = Ql3Counter - 7;
         }
     }
-        
-	//# 1 PLAYER'S REGISTRATION #
-	
+    
+    public void writeFile(String path) {
+
+        c = 1;
+
+        File archive = new File(path);
+        try {
+            if (archive.exists()) {
+                FileWriter fw = new FileWriter(archive, true);
+                BufferedWriter bw = new BufferedWriter(fw);
+
+                // i = Quantas vezes foi colocada a questão
+                // c = Quantas vezes errou o input
+                if (i == 0) {
+                    while (c > 0) {
+                        System.out.println("Qual o nível da questão?");
+                        String levelQuestion = sC.nextLine();
+                        switch (levelQuestion) {
+                            case "1":
+                                bw.write(levelQuestion);
+                                bw.newLine();
+                                c = 0;
+                                break;
+
+                            case "2":
+                                bw.write(levelQuestion);
+                                bw.newLine();
+                                c = 0;
+                                break;
+                            case "3":
+                                bw.write(levelQuestion);
+                                bw.newLine();
+                                c = 0;
+                                break;
+                            default:
+                                System.out.println("\nNível inválido, volte a tentar\n");
+                                break;
+                        }
+                    }
+                }
+
+                System.out.println("Qual a questão?");
+                String question = sC.nextLine();
+                bw.write("R: " + question);
+                bw.newLine();
+
+                System.out.println("\nQuais as opções do jogador?\n");
+                for (c = 0; c < 4; c++) {
+                    System.out.println("Introduza a opçao numero " + (c + 1));
+                    String validOption = sC.nextLine();
+                    if (c == 0) {
+                        bw.write("A: " + validOption);
+                        bw.newLine();
+                    }
+                    if (c == 1) {
+                        bw.write("B: " + validOption);
+                        bw.newLine();
+                    }
+                    if (c == 2) {
+                        bw.write("C: " + validOption);
+                        bw.newLine();
+                    }
+                    if (c == 3) {
+                        bw.write("D: " + validOption);
+                        bw.newLine();
+                    }
+                }
+
+                if (i == 0) {
+                    while (c > 0) {
+                        System.out.println("Qual a resposta à questão colocada?");
+                        String validAnswer = sC.nextLine();
+                        switch (validAnswer) {
+                            case "A":
+                                bw.write("R: " + validAnswer + "\n");
+                                bw.newLine();
+                                c = 0;
+                                break;
+
+                            case "B":
+                                bw.write("R: " + validAnswer + "\n");
+                                bw.newLine();
+                                c = 0;
+                                break;
+                            case "C":
+                                bw.write("R: " + validAnswer + "\n");
+                                bw.newLine();
+                                c = 0;
+                                break;
+                            case "D":
+                                bw.write("R: " + validAnswer + "\n");
+                                bw.newLine();
+                                c = 0;
+                                break;
+                            default:
+                                System.out.println("\nTipo de resposta inválida, volte a tentar\n");
+                                break;
+                        }
+                    }
+                }
+
+                bw.close();
+                fw.close();
+            }
+        } catch (IOException e) {
+            System.out.println("File not found");
+        }
+    }
+
+    //# 1 PLAYER'S REGISTRATION #	
     public void asknamePlayer() {
         System.out.println("Qual o nome do concorrente?");
         name = sC.nextLine();
