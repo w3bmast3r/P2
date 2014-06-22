@@ -2,18 +2,25 @@ package QQSM;
 
 import java.io.*;
 import java.util.*;
-	
 
-public class Questao_QQSM extends QQSM{
+public class Questao_QQSM extends QQSM {
 
-    public static void main(String[] args) throws FileNotFoundException{
-    	
-    	Questao_QQSM newGame = new Questao_QQSM();
+    public static void main(String[] args) throws IOException {
+
+        //CREATE OBJECT
+        Questao_QQSM newGame = new Questao_QQSM();
+
+        //PLAYER REGISTRATION
         newGame.asknamePlayer();
-	newGame.readFile("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/perguntascompleto.txt");
-    	newGame.counterLevel();
-    	//newGame.writeFile("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/teste.txt");
-        
+
+        //READ FILE SPECIFIED
+        newGame.readFile("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/perguntascompleto1.txt");
+
+        //RUN GAME
+        newGame.counterLevel();
+
+        //WRITE ON FILE SPECIFIED
+        //newGame.writeFile("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/teste.txt");
     }
-		
-}	
+
+}

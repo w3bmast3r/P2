@@ -20,8 +20,7 @@ public class QQSM {
 
     Scanner sC = new Scanner(System.in);
     Random rN = new Random();
-	
-	
+
     //READ FILE > ORGANIZE ALL LEVELS ON COMPATIBLE ARRAYLISTS
     public void readFile(String path) {
 
@@ -58,10 +57,10 @@ public class QQSM {
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("\nFicheiro não encontrado.");
+            System.out.println("Ficheiro não encontrado");
         }
     }
-   
+
     //VERIFY NUMBER LEVEL && CONVERT USER'S ANSWER IN TYPE "R: A" && VERIFY INPUT
     public void counterLevel() {
         while (i < 15) {                                                                                                                         //NUMBER LEVELS
@@ -186,7 +185,7 @@ public class QQSM {
             }
         }
     }
-    
+
     //USER'S INPUT VERIFICATION
     public void verifyInput(int Ql) {
         if (Ql == 1) {
@@ -458,11 +457,12 @@ public class QQSM {
             }
         }
     }
-    
+
     public void convertAnswer() {
         finalAnswer = ("R: " + answer);
     }
-	
+
+    //REMOVES QUESTIONS (CORRECTLY ANSWERED) FROM ARRAYLISTS
     public void removeQuestion(int Ql) {
         if (Ql == 1) {
             for (c = 0; c < 7; c++) {
@@ -483,44 +483,42 @@ public class QQSM {
             Ql3Counter = Ql3Counter - 7;
         }
     }
-    
-    public void writeFile(String path) {
 
-        c = 1;
+    public void writeFile(String path) throws IOException {
 
-        File archive = new File(path);
+        c = 1;                                                                                                                                  // c = WRONG INPUT (HOW MANY TIMES) 
+
         try {
+            File archive = new File(path);
             if (archive.exists()) {
                 FileWriter fw = new FileWriter(archive, true);
                 BufferedWriter bw = new BufferedWriter(fw);
 
-                // i = Quantas vezes foi colocada a questão
-                // c = Quantas vezes errou o input
-                    while (c > 0) {
-                        System.out.println("Qual o nível da questão?");
-                        String levelQuestion = sC.nextLine();
-                        switch (levelQuestion) {
-                            case "1":
-                                bw.write(levelQuestion);
-                                bw.newLine();
-                                c = 0;
-                                break;
+                while (c > 0) {
+                    System.out.println("Qual o nível da questão?");
+                    String levelQuestion = sC.nextLine();
+                    switch (levelQuestion) {
+                        case "1":
+                            bw.write(levelQuestion);
+                            bw.newLine();
+                            c = 0;
+                            break;
 
-                            case "2":
-                                bw.write(levelQuestion);
-                                bw.newLine();
-                                c = 0;
-                                break;
-                            case "3":
-                                bw.write(levelQuestion);
-                                bw.newLine();
-                                c = 0;
-                                break;
-                            default:
-                                System.out.println("\nNível inválido, volte a tentar\n");
-                                break;
-                        }
+                        case "2":
+                            bw.write(levelQuestion);
+                            bw.newLine();
+                            c = 0;
+                            break;
+                        case "3":
+                            bw.write(levelQuestion);
+                            bw.newLine();
+                            c = 0;
+                            break;
+                        default:
+                            System.out.println("\nNível inválido, volte a tentar\n");
+                            break;
                     }
+                }
 
                 System.out.println("Qual a questão?");
                 String question = sC.nextLine();
@@ -586,7 +584,7 @@ public class QQSM {
                 fw.close();
             }
         } catch (IOException e) {
-            System.out.println("File not found");
+            System.out.println(e.getMessage());
         }
     }
 
@@ -597,5 +595,5 @@ public class QQSM {
         System.out.println("\nBem vindo ao jogo do Quem Quer Ser Milionário " + name + "!\n");
         System.out.println("A qualquer momento poderá desistir escrevendo 'DESISTO'");
     }
-	
+
 }
