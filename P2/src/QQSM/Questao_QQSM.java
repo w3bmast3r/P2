@@ -14,7 +14,7 @@ public class Questao_QQSM extends QQSM {
         newGame.asknamePlayer();
 
         //READ FILE SPECIFIED
-        newGame.readFile("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/perguntascompleto1.txt");
+        newGame.readFile("/home/bruno/NetBeansProjects/P2/P2/src/QQSM/perguntas.txt");
 
         //RUN GAME
         newGame.counterLevel();
